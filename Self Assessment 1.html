@@ -1,0 +1,81 @@
+function getInitials (firstName, lastName) {
+    var firstInitial = firstName.charAt(0).toUpperCase() + '.'+ lastName.charAt(0).toUpperCase();
+    return firstInitial + '.';
+  }
+
+  function minAndMax (numbers) {
+    let min = numbers[0];
+    let max = numbers[numbers.length-1];
+    return 'Min is ' + min + ' ' + 'Max is '+ max;
+  }
+
+  function isEven (number) {
+    return number % 2 ===0;
+  }
+
+
+  function introduceFriend (friendObj) {
+    var friendName = friendObj.name;
+    var friednOccupation = friendObj.occupation;
+    return 'This is my friend ' + friendName +'. '+'Their title is ' + friednOccupation;
+  }
+
+  function spiceThreshold (integer) {
+    if (integer === 0){
+        return "No spice!";
+    }else if (integer >0 && integer <=3){
+        return "Mild!";
+    }else if (integer >3 && integer <=7){
+        return "Medium!";
+    }else if (integer >7 && integer <=10){
+        return "Hot!";
+    }
+  }
+
+  function idealTimes () {
+   var myAnswer = {
+    dayOfTheWeek: 'Monday',
+    monthOfTheYear: 'January',
+    seasonOfTheYear: 'Spring'
+   }
+   return myAnswer;
+  }
+
+  function isThisAVowel (letter) {
+    if (letter ==='a'|| letter ==='e'||letter ==='i'||letter ==='o'||letter ==='u'){
+       return true; 
+    }else{
+        return false;
+    }
+  }
+
+  function countOccurences (collection, number) {
+    var count = 0;
+    for (var i = 0; i < collection.length; i++){
+        if (collection[i] === number){
+            count +=1;
+        }
+    }
+    return count;
+  }
+
+  function lowBatteryNotification (phoneInfo) {
+    if (phoneInfo.batteryPercentage <= 25){
+        return "Low Power. Charge Soon!";
+    }else{
+        return null;
+    }
+  }
+
+  function blackJackResponse(cardValues) {
+    var sum = 0;
+    for (var i = 0; i < cardValues.length; i++){
+        sum = sum + cardValues[i];
+    }
+    console.log(sum)
+    if (sum <= 21){
+        return 'Player stays with ' + sum; 
+    }else{
+        return 'Player busts with ' + sum;
+    }
+  }
